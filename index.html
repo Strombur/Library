@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Library</title>
+    </head>
+    <body id="body">
+
+        <div id="parent">
+            <div>
+                <button id="logInAdmin" onmousedown="logInAdmin()">Log in by Admin</button>
+
+            </div>
+            <div id="adminPlace" hidden>
+                <input id="inputISBN" type="number" placeholder="ISBN">
+                <input id="inputBook" placeholder="Название книги">
+                <input id="inputSername" placeholder="Фамилия автора">
+                <input id="inputText" placeholder="Описание">
+
+                <select id="inputCategory" name="category">
+                    <option disabled selected value="category">Категория</option>
+                    <optgroup label="Русская">
+                        <option value="Русская проза">Проза</option>
+                        <option value="Русская поэзия">Поэзия</option>
+                        <option value="Русские былины">Былины</option>
+                        <option value="Русская драматургия">Драматургия</option>
+                    </optgroup>
+                    <optgroup label="Зарубежная">
+                        <option value="Зарубежная проза">Проза</option>
+                        <option value="Зарубежная поэзия">Поэзия</option>
+                        <option value="Зарубежная сатира">Сатира</option>
+                        <option value="Зарубежная драматургия">Драматургия</option>
+                    </optgroup>
+                    <optgroup label="Классика">
+                        <option value="Русская классика">Русская</option>
+                        <option value="Британская классика">Британская</option>
+                        <option value="Испанская классика">Испанская</option>
+                        <option value="Французкая классика">Французкая</option>
+                    </optgroup>
+                    <optgroup label="Современная">
+                        <option value="Современная комедия">Комедия</option>
+                        <option value="Современная трагедия">Трагедия</option>
+                        <option value="Современная драма">Драма</option>
+                        <option value="Современная ужасы">Ужасы</option>
+                    </optgroup>
+                </select>
+                <button onclick="validateAndAdd()">Добавить</button>
+                <button onclick="validateAndUpgrade()">Обновить</button>
+            </div>
+        </div>
+        <div>
+            <button id="buttonBookList" onmousedown="showBookList()">Book List</button>
+            <button id="buttonSearchList" onmousedown="showSearchList()">Search</button>
+
+        </div>
+        <div>
+           <table border="" cellpadding="0" cellspacing="0" id="bookList">
+               <tr>
+                <th>ISBN</th>
+                <th>Название</th>
+                <th>Фамилия автора</th>
+                <th>Категория</th>
+                <th>Описание</th>
+              </tr>
+           </table>
+        </div>
+        <div id="searchPlace" hidden>
+            <div>
+                <input id="inputSearchBook" placeholder="ISBN, Название книги, Фамилия автора">
+
+                <button onclick="searchBook()">Search</button>
+            </div>
+
+           <table id="searchList" border="" cellpadding="0" cellspacing="0">
+
+              <tr>
+                <th>ISBN</th>
+                <th>Название</th>
+                <th>Фамилия автора</th>
+                <th>Категория</th>
+                <th>Описание</th>
+              </tr>
+           </table>
+        </div>
+
+
+
+        <script src="script.js"></script>
+    </body>
+</html>
